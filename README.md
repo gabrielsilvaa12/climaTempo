@@ -54,11 +54,11 @@ Para executar o projeto localmente, siga os passos abaixo:
 
 1.  Clone este repositório:
     ```sh
-    git clone [https://github.com/seu-usuario/seu-repositorio.git](https://github.com/seu-usuario/seu-repositorio.git)
+    git clone https://github.com/gabrielsilvaa12/climaTempo.git
     ```
 2.  Navegue até o diretório do projeto:
     ```sh
-    cd seu-repositorio
+    cd climaTempo
     ```
 3.  Abra o arquivo `index.html` em seu navegador de preferência.
 
