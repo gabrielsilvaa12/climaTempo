@@ -1,7 +1,6 @@
 # Previsão do Tempo 🌤️
 
 <p align="center">
-  <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License">
   <img src="https://img.shields.io/badge/tech-JavaScript-yellow.svg" alt="Tech">
   <img src="https://img.shields.io/badge/status-concluído-brightgreen.svg" alt="Status">
 </p>
