@@ -1,8 +1,5 @@
 # Previsão do Tempo 🌤️
 
-![Captura de tela da aplicação](./screenshot.png) 
-*Adicione uma captura de tela do seu projeto e renomeie o arquivo para `screenshot.png`*
-
 <p align="center">
   <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License">
   <img src="https://img.shields.io/badge/tech-JavaScript-yellow.svg" alt="Tech">
