@@ -1,29 +1,69 @@
-# Previsão do Tempo
+# Previsão do Tempo 🌤️
 
-Este é um aplicativo web simples para exibir a previsão do tempo de uma cidade, mostrando as condições atuais e a previsão para os próximos 5 dias.
+![Captura de tela da aplicação](./screenshot.png) 
+*Adicione uma captura de tela do seu projeto e renomeie o arquivo para `screenshot.png`*
 
-## Tecnologias Utilizadas
+<p align="center">
+  <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License">
+  <img src="https://img.shields.io/badge/tech-JavaScript-yellow.svg" alt="Tech">
+  <img src="https://img.shields.io/badge/status-concluído-brightgreen.svg" alt="Status">
+</p>
 
-O projeto foi construído com as seguintes tecnologias:
+Aplicação web front-end desenvolvida para consultar o clima e a previsão do tempo de qualquer cidade do mundo. O projeto consome dados da [OpenWeather API](https://openweathermap.org/api) e os exibe em uma interface limpa e responsiva.
 
-* **HTML5:** Para a estrutura da página.
-* **CSS3:** Para a estilização e design. O projeto utiliza o framework **Tailwind CSS** para um estilo moderno e responsivo.
-* **JavaScript:** Para a lógica da aplicação, manipulação do DOM e comunicação com a API.
-* **OpenWeather API:** Utilizada para obter os dados do clima.
+🔗 **[Acesse a demonstração ao vivo](URL_DO_SEU_PROJETO_AQUI)** *(substitua pela URL do seu projeto hospedado)*
 
-## Como a API Funciona
+## ✨ Funcionalidades
 
-Este aplicativo utiliza a API gratuita **"5 day / 3 hour forecast"** da OpenWeather.
+-   **Busca por Cidade:** Pesquise o clima de qualquer cidade do mundo.
+-   **Clima Atual:** Veja a temperatura atual, descrição do tempo (ex: "céu limpo"), e velocidade do vento.
+-   **Previsão de 5 Dias:** Obtenha a previsão das temperaturas mínimas e máximas para os próximos cinco dias.
+-   **Interface Responsiva:** O layout se adapta a diferentes tamanhos de tela, de desktops a dispositivos móveis.
+-   **Feedback ao Usuário:** Exibe mensagens de "Carregando..." e de erro para uma melhor experiência de uso.
 
-1.  A aplicação faz uma chamada única para a API, que retorna dados de previsão para os próximos 5 dias em intervalos de 3 horas.
-2.  Uma função em JavaScript (`dadosPrevisao`) é responsável por processar esses dados. Ela agrupa todas as medições de 3 em 3 horas para cada dia.
-3.  Para cada dia, a função calcula a temperatura mínima e máxima, garantindo que a previsão diária seja precisa, mesmo com a limitação da API gratuita.
+## 🛠️ Tecnologias Utilizadas
 
-## Instalação e Execução
+Este projeto foi construído com as seguintes tecnologias:
 
-Para executar o projeto, siga os passos abaixo:
+| Tecnologia | Descrição |
+| :--- | :--- |
+| **HTML5** | Estruturação semântica do conteúdo. |
+| **CSS3** | Estilização da interface, com uso de Flexbox para criar um layout moderno e responsivo. |
+| **JavaScript (ES6+)**| Lógica da aplicação, manipulação do DOM e requisições à API com `async/await` e `Promise.all`. |
+| **OpenWeather API**| Fornecimento dos dados de geolocalização, clima atual e previsão do tempo. |
 
-1.  Clone este repositório para o seu computador.
-2.  Abra o arquivo `index.html` em qualquer navegador web moderno (Google Chrome, Firefox, Edge, etc.).
+## 🚀 Arquitetura e Como Funciona
 
-A aplicação será carregada automaticamente e você poderá pesquisar a previsão do tempo de qualquer cidade.
+A lógica da aplicação segue um fluxo eficiente para obter e exibir os dados do clima:
+
+1.  **Captura do Input:** O script aguarda o usuário digitar o nome de uma cidade e submeter o formulário.
+
+2.  **Geocodificação:** Uma requisição é enviada ao endpoint de **Geocoding** da OpenWeather API para converter o nome da cidade em coordenadas geográficas (latitude e longitude).
+
+3.  **Busca Paralela de Dados:** Com as coordenadas obtidas, o `Promise.all` é utilizado para disparar duas requisições à API de forma simultânea, otimizando o tempo de resposta:
+    * Uma chamada ao endpoint de **Current Weather** para obter os dados do clima em tempo real.
+    * Uma chamada ao endpoint de **5 day / 3 hour Forecast** para obter a previsão do tempo para os próximos 5 dias, com dados fornecidos em intervalos de 3 horas.
+
+4.  **Processamento dos Dados:** Uma função (`dadosPrevisao`) processa a lista de previsões de 3 em 3 horas. Ela agrupa os dados por dia e calcula a temperatura mínima e máxima para cada um deles, garantindo um resumo diário preciso.
+
+5.  **Renderização Dinâmica:** Por fim, as informações processadas são inseridas dinamicamente no HTML, atualizando a interface para o usuário.
+
+## ⚙️ Instalação e Execução
+
+Para executar o projeto localmente, siga os passos abaixo:
+
+1.  Clone este repositório:
+    ```sh
+    git clone [https://github.com/seu-usuario/seu-repositorio.git](https://github.com/seu-usuario/seu-repositorio.git)
+    ```
+2.  Navegue até o diretório do projeto:
+    ```sh
+    cd seu-repositorio
+    ```
+3.  Abra o arquivo `index.html` em seu navegador de preferência.
+
+A aplicação estará pronta para uso.
+
+## 📄 Licença
+
+Este projeto está distribuído sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
