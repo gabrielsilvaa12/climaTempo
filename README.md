@@ -8,8 +8,6 @@
 
 Aplicação web front-end desenvolvida para consultar o clima e a previsão do tempo de qualquer cidade do mundo. O projeto consome dados da [OpenWeather API](https://openweathermap.org/api) e os exibe em uma interface limpa e responsiva.
 
-🔗 **[Acesse a demonstração ao vivo](URL_DO_SEU_PROJETO_AQUI)** *(substitua pela URL do seu projeto hospedado)*
-
 ## ✨ Funcionalidades
 
 -   **Busca por Cidade:** Pesquise o clima de qualquer cidade do mundo.
