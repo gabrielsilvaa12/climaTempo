@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Previsão do Tempo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container">
+        <h1>Verifique a Previsão do Tempo</h1>
+
+        <form class="busca" aria-label="Formulário de busca de cidade">
+            <input 
+                type="search" 
+                id="searchInput" 
+                placeholder="Digite o nome da cidade..."
+                aria-label="Campo de busca por cidade"
+            />
+            <button type="submit" aria-label="Buscar">Buscar</button>
+        </form>
+
+        <div class="resultado" style="display: none;">
+            <h2 class="titulo"></h2>
+            
+            <div class="informacoes">
+                <div class="info-temp">
+                    <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="Ícone do tempo" />
+                    <div class="temperatura"></div>
+                </div>
+                <div class="info-detalhes">
+                    <div class="tempInfo"></div>
+                    <div class="ventoInfo"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="previsao-7-dias" style="display: none;">
+            <h3>Previsão para os próximos 5 dias</h3>
+            <div id="forecast-container">
+                </div>
+        </div>
+        
+        <div class="aviso"></div>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

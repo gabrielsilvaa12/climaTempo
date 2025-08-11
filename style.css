@@ -1,0 +1,175 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+/* --- Formulário de Busca --- */
+.busca {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#searchInput {
+    flex-grow: 1;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#searchInput:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+.busca button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.busca button:hover {
+    background-color: #2980b9;
+}
+
+/* --- Área de Resultados --- */
+.resultado {
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.titulo {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.informacoes {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.info-temp {
+    display: flex;
+    align-items: center;
+}
+
+.temperatura {
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+
+.temperatura sup {
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+
+.info-detalhes {
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.tempInfo {
+    text-transform: capitalize;
+}
+
+.ventoInfo span {
+    font-size: 0.8rem;
+}
+
+/* --- Área de Previsão --- */
+.previsao-7-dias {
+    margin-top: 25px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.previsao-7-dias h3 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+#forecast-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.day-forecast {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 8px 15px;
+    border-radius: 8px;
+}
+
+.day-forecast img {
+    width: 40px;
+    height: 40px;
+}
+
+/* --- Mensagem de Aviso --- */
+.aviso {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 500;
+    color: #e74c3c;
+}
+
+/* --- Estilos para telas menores (Responsivo) --- */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+    .informacoes {
+        flex-direction: column;
+    }
+    .temperatura {
+        font-size: 3rem;
+    }
+}
