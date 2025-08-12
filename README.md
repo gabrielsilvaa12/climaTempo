@@ -57,7 +57,3 @@ Para executar o projeto localmente, siga os passos abaixo:
 3.  Abra o arquivo `index.html` em seu navegador de preferência.
 
 A aplicação estará pronta para uso.
-
-## 📄 Licença
-
-Este projeto está distribuído sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
